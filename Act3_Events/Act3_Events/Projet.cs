@@ -8,7 +8,7 @@ namespace Act3_Events
 {
     class Projet
     {
-        public void ResoudreTrinome(int a, int b, int c, out string result)
+        public void ResoudreTrinome(double a, double b, double c, out string result)
         {
             double Delta;
             result = "";
@@ -29,7 +29,7 @@ namespace Act3_Events
             {
                 x1 = (-b + Math.Sqrt(Delta)) / (2 * a);
                 x2 = (-b - Math.Sqrt(Delta)) / (2 * a);
-                result = "x1 est égal à : " + Math.Round(x1, 2) + " x2 est égal à : " + Math.Round(x2, 2);
+                result = " de x1 est égal à : " + Math.Round(x1, 2) + " et Le résultat de x2 est égal à : " + Math.Round(x2, 2);
             }
         }
     }

@@ -21,67 +21,59 @@ namespace Act3_Events
             InitializeComponent();
 
             Btn_1.PreviewTextInput += new TextCompositionEventHandler(VerifTextInput);
+            Btn_2.PreviewTextInput += new TextCompositionEventHandler(VerifTextInput);
+            Btn_3.PreviewTextInput += new TextCompositionEventHandler(VerifTextInput);
             Btn_Calc.MouseEnter += new MouseEventHandler(SurvolBtn);
             Btn_Calc.MouseLeave += new MouseEventHandler(AfterSurvolBtn);
 
         }
 
-        private bool EstEntier(string textEnter)
-        {
+        private bool EstEntier(string textEnter){
             return int.TryParse(textEnter, out int number);
         }
 
-        private void VerifTextInput(object sender, TextCompositionEventArgs e)
-        {
-            if (e.Text != "," && !EstEntier(e.Text) && e.Text != "-")
-            {
+        private void VerifTextInput(object sender, TextCompositionEventArgs e){
+            if (e.Text != "," && !EstEntier(e.Text) && e.Text != "-"){
                 e.Handled = true;
             }
-            else
-            {
-                if (e.Text == "," || e.Text == "-")
-                {
-                    if (((TextBox)sender).Text.IndexOf(e.Text) > -1)
-                    {
+            else{
+                if (e.Text == "," || e.Text == "-"){
+                    if (((TextBox)sender).Text.IndexOf(e.Text) > -1){
                         e.Handled = true;
                     }
-                    else
-                    {
+                    else{
                         e.Handled = false;
                     }
                 }
             }
         }
 
-        private void SurvolBtn(object sender, MouseEventArgs e)
-        {
+        private void SurvolBtn(object sender, MouseEventArgs e){
             Btn_v.Visibility = Visibility.Visible;
             Btn_v.Background = Brushes.Blue;
         }
 
-        private void AfterSurvolBtn(object sender, MouseEventArgs e)
-        {
+        private void AfterSurvolBtn(object sender, MouseEventArgs e){
             Btn_v.Visibility = Visibility.Hidden;
             Btn_v.Background = Brushes.Transparent;
         }
 
-        private void ClickCalc(object sender, RoutedEventArgs e)
-        {
-            
-            string result;
-            int textbox1 = Convert.ToInt32(Btn_1.Text);
-            int textbox2 = Convert.ToInt32(Btn_2.Text);
-            int textbox3 = Convert.ToInt32(Btn_3.Text);
-            Projet mesOutils = new Projet();
-            mesOutils.ResoudreTrinome(textbox1, textbox2, textbox3, out result);
+        private void ClickCalc(object sender, RoutedEventArgs e){
 
-            Affichage secondPage = new Affichage();
-            secondPage.TextResult.Text = secondPage.TextResult.Text + " " + result;
-            this.Visibility = Visibility.Hidden;
-            secondPage.Show();
+           
+           
+            if (double.TryParse(Btn_1.Text, out double resultbtn1) && double.TryParse(Btn_2.Text, out double resultbtn2) && double.TryParse(Btn_3.Text, out double resultbtn3))
+            {
+                string result;
 
+                Projet mesOutils = new Projet();
+                mesOutils.ResoudreTrinome(resultbtn1, resultbtn2, resultbtn3, out result);
+
+                Affichage SecondPage = new Affichage();
+                SecondPage.TextResult.Text = SecondPage.TextResult.Text + " " + result;
+                this.Visibility = Visibility.Visible;
+                SecondPage.Show();
+            }
         }
-
-       
     }
 }

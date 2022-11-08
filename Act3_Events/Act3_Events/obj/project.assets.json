@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gmist\\OneDrive\\Bureau\\6TTI_EX\\UAA14_WPF\\Act3_Events\\Act3_Events\\Act3_Events.csproj",
+      "projectUniqueName": "C:\\Users\\gmist\\OneDrive\\Bureau\\6TTI_EX\\UAA14_WPF\\Act3_eventsWPF\\Act3_Events\\Act3_Events\\Act3_Events.csproj",
       "projectName": "Act3_Events",
-      "projectPath": "C:\\Users\\gmist\\OneDrive\\Bureau\\6TTI_EX\\UAA14_WPF\\Act3_Events\\Act3_Events\\Act3_Events.csproj",
+      "projectPath": "C:\\Users\\gmist\\OneDrive\\Bureau\\6TTI_EX\\UAA14_WPF\\Act3_eventsWPF\\Act3_Events\\Act3_Events\\Act3_Events.csproj",
       "packagesPath": "C:\\Users\\gmist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gmist\\OneDrive\\Bureau\\6TTI_EX\\UAA14_WPF\\Act3_Events\\Act3_Events\\obj\\",
+      "outputPath": "C:\\Users\\gmist\\OneDrive\\Bureau\\6TTI_EX\\UAA14_WPF\\Act3_eventsWPF\\Act3_Events\\Act3_Events\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

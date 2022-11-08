@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Act3_Events"
         mc:Ignorable="d"
         Title="Affichage" Height="450" Width="800">
-    <Grid>
-        <TextBlock x:Name="TextResult">Le résultat est :</TextBlock>
+    <Grid x:Name="SecondPage">
+        <TextBlock x:Name="TextResult">Le résultat est </TextBlock>
     </Grid>
 </Window>
